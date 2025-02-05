@@ -1,6 +1,5 @@
 package com.github.japudcret.randomfishing.loot
 
-import net.fabricmc.fabric.api.loot.v3.FabricLootTableBuilder
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents
 import net.minecraft.item.Item
 import net.minecraft.loot.LootPool
@@ -54,15 +53,6 @@ class LootTableModifier {
                     logger.info("Registered ${entries.size} entries for fishing")
 
                     return@register tableBuilder.build()
-
-                    /*
-                    // do something dirty -- TODO: does not work in live
-                    LootTable::class.java.getDeclaredField("pools").let {
-                        it.isAccessible = true
-
-                        it.set(original, mutableListOf(lootPool.build()))
-                    }
-                    */
                 }
 
                 return@register null

@@ -9,10 +9,7 @@ object RandomFishing : ModInitializer {
     private val logger = LoggerFactory.getLogger("random-fishing")
 
 	override fun onInitialize() {
-		// This code runs as soon as Minecraft is in a mod-load-ready state.
-		// However, some things (like resources) may still be uninitialized.
-		// Proceed with mild caution.
-		logger.info("Hello Fabric world!")
+		logger.info("Initializing Fishing loot tables")
 
 		LootTableModifier.modifyLootTable();
 	}
